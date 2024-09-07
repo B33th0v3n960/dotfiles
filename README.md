@@ -3,35 +3,35 @@
 ## Folder Structure 
 
 ```
-$󱂵 HOME
-├──  .config
-│  ├──  bash
-│  ├──  bspwm
-│  ├──  btop
-│  ├──  dunst
-│  ├──  hypr
-│  ├──  imv
-│  ├──  kitty
-│  ├──  mpd
-│  ├──  mpv
-│  ├──  ncmpcpp
-│  ├──  neofetch
-│  ├──  ranger
-│  ├──  rofi
-│  ├──  scripts
-│  ├──  sxhkd
-│  ├──  waybar
-│  ├──  zathura
-│  ├──  zsh
-│  ├──  mimeapps.list
-│  └──  starship.toml
-├── 󱆃 .bash_profile
-├── 󱆃 .bashrc
-├──  .tmux.conf
-├──  .gitconfig
-├── 󱆃 .profile
-├── 󱆃 .zprofile
-└── 󱆃 .zshrc
+$HOME
+├──.config
+│  ├──bash
+│  ├──bspwm
+│  ├──btop
+│  ├──dunst
+│  ├──hypr
+│  ├──imv
+│  ├──kitty
+│  ├──mpd
+│  ├──mpv
+│  ├──ncmpcpp
+│  ├──neofetch
+│  ├──ranger
+│  ├──rofi
+│  ├──scripts
+│  ├──sxhkd
+│  ├──waybar
+│  ├──zathura
+│  ├──zsh
+│  ├──mimeapps.list
+│  └──starship.toml
+├──.bash_profile
+├──.bashrc
+├──.tmux.conf
+├──.gitconfig
+├──.profile
+├──.zprofile
+└──.zshrc
 ```
 
 
