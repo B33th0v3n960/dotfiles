@@ -1,0 +1,188 @@
+* {
+  border: none;
+  /* border-radius: 6px; */
+  font-family: 'FantasqueSansMono Nerd Font', 'JetBrainsMono Bold',
+    'Roboto Mono Medium', Helvetica, Arial, sans-serif;
+  /* Recommended font sizes: 720p: ~14px, 1080p: ~18px */
+  font-size: 18px;
+  min-height: 0;
+}
+
+/* icons start at U+E900 in Jetbrains mono in gucharmap */
+
+window#waybar {
+  /* background-color: rgba(50, 50, 50, 0.9); */
+  background-color: #24273a;
+  border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+  color: #24273a;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 0;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+  background-color: #24273a;
+}
+
+window#waybar.chromium {
+  background-color: #000000;
+  border: none;
+}
+
+#workspaces button {
+  padding: 0 0 0 0;
+  margin: 4px 2px 6px 0;
+  background-color: transparent;
+  color: #ffffff;
+  min-width: 36px;
+  /* Use box-shadow instead of border so the text isn't offset */
+  /*    box-shadow: inset 0 -3px transparent;*/
+  /* border-radius: 0px; */
+}
+
+#workspaces button.active {
+  padding: 0 0 0 0;
+  margin: 4px 0 4px 0;
+  background-color: #cad3f5;
+  color: #24273a;
+  min-width: 36px;
+  /* Use box-shadow instead of border so the text isn't offset */
+  /*    box-shadow: inset 0 -3px transparent;*/
+  /* border-radius: 0px; */
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  background: #cad3f5;
+  color: #24273a;
+  border: 0;
+  box-shadow: none;
+
+  /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces button.focused {
+  background-color: #bbccdd;
+  color: #323232;
+  /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727d;
+  border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-power,
+#custom-pacman,
+#mpd,
+#language {
+  padding: 1px 6px 0px 6px;
+  margin: 4px 3px 5px 3px;
+  color: #ffffff;
+  /* background-color: #bbccdd; */
+  background-color: transparent;
+}
+
+#window,
+#workspaces {
+  margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock {
+  margin-right: 4px;
+  color: #b7bdf8;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#cpu {
+  color: #eed49f;
+}
+
+#memory {
+  color: #c6a0f6;
+}
+
+#network {
+  color: #7dc4e4;
+}
+
+#network.disconnected {
+  color: #ed8796;
+}
+
+#pulseaudio {
+  color: #a6da95;
+}
+
+#pulseaudio.muted {
+  color: #a0a0a0;
+}
+
+#temperature {
+  color: #f5a97f;
+  /* background-color: #f0932b; */
+}
+
+#temperature.critical {
+  background-color: #ed8796;
+}
+
+#custom-separator {
+  color: #606060;
+  margin: 0 1px;
+  padding-bottom: 4px;
+}
+
+#custom-launcher {
+  padding: 0 1px 1px 1px;
+  margin: 4px 0 6px 0;
+  min-width: 36px;
+  font-size: 20px;
+  color: #8bd5ca;
+}
+
+#mpd {
+  color: #a6da95;
+}

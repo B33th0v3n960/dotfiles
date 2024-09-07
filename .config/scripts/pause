@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+if [[ -x `which mpc` ]]; then
+	if [[ "$1" == "toggle" ]]; then
+	  mpc --host 127.0.0.1 -p 6600 toggle 
+	elif [[ "$1" == "play" ]]; then
+	  mpc --host 127.0.0.1 -p 6600 play
+    dunstify "Playing"
+	elif [[ "$1" == "pause" ]]; then
+	  mpc --host 127.0.0.1 -p 6600 pause
+    dunstify "Paused"
+	elif [[ "$1" == "next" ]]; then
+	  mpc --host 127.0.0.1 -p 6600 next
+    dunstify "Skip Song"
+	elif [[ "$1" == "prev" ]]; then
+	  mpc --host 127.0.0.1 -p 6600 prev
+    dunstify "Skip Back to Previous Song"
+	fi
+else
+	${notify_cmd} "'mpc' is not installed."
+fi

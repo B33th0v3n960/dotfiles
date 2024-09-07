@@ -1,0 +1,10 @@
+picom &
+polybar &
+nitrogen --restore &
+sxhkd &
+
+mpd &
+udiskie &
+dunst &
+
+notify-send -u low "󰯉  Start-up Script 󰯉 " &

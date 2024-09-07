@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+run() {
+  rsync -rva --delete  ~/Desktop ~/Media/data 
+  rsync -rva --delete  ~/Documents ~/Media/data 
+  rsync -rva --delete  ~/Downloads ~/Media/data 
+  rsync -rva --delete  ~/Music ~/Media/data 
+  rsync -rva --delete  ~/Pictures ~/Media/data 
+  rsync -rva --delete  ~/Videos ~/Media/data
+}
+
+dry-run() {
+  rsync --dry-run -rva --delete  ~/Desktop ~/Media/data 
+  rsync --dry-run -rva --delete  ~/Documents ~/Media/data 
+  rsync --dry-run -rva --delete  ~/Downloads ~/Media/data 
+  rsync --dry-run -rva --delete  ~/Music ~/Media/data 
+  rsync --dry-run -rva --delete  ~/Pictures ~/Media/data 
+  rsync --dry-run -rva --delete  ~/Videos ~/Media/data
+}
+
+pull() {
+  rsync -rva --delete  ~/Media/data ~/Desktop 
+  rsync -rva --delete  ~/Media/data ~/Documents 
+  rsync -rva --delete  ~/Media/data ~/Downloads 
+  rsync -rva --delete  ~/Media/data ~/Music 
+  rsync -rva --delete  ~/Media/data ~/Pictures 
+  rsync -rva --delete  ~/Media/data ~/Videos 
+}
+
+pull-dry() {
+  rsync --dry-run -rva --delete  ~/Media/data ~/Desktop 
+  rsync --dry-run -rva --delete  ~/Media/data ~/Documents 
+  rsync --dry-run -rva --delete  ~/Media/data ~/Downloads 
+  rsync --dry-run -rva --delete  ~/Media/data ~/Music 
+  rsync --dry-run -rva --delete  ~/Media/data ~/Pictures 
+  rsync --dry-run -rva --delete  ~/Media/data ~/Videos 
+}
+
+
+if [[ -x `which rsync` ]]; then 
+  if [[ "$1" == "--run" ]]; then
+    run
+  elif [[ "$1" == "--dry" ]]; then 
+    dry-run
+  elif [[ "$1" == "--pull-dry" ]]; then 
+    pull-dry
+  elif [[ "$1" == "--pull" ]]; then 
+    pull
+  else 
+    dry-run
+  fi 
+fi

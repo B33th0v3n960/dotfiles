@@ -1,0 +1,9 @@
+[user]
+	name = B33th0v3n960
+	email = zhousun06@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[merge]
+	tool = nvimdiff
