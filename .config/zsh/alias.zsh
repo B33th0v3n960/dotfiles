@@ -7,7 +7,7 @@
 #  ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 #
 
-alias cls='clear'
+alias cls='clear && fetch'
 
 # exa aliases
 alias ll='exa -al --color=always --group-directories-first --icons --sort=extension --git --git-ignore'   # long format --all
@@ -54,6 +54,7 @@ alias s="kitty +kitten ssh"
 alias nvi="env -u WAYLAND_DISPLAY neovide"
 alias yt-music='yt-dlp --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 alias vi-alias="vim ~/.config/zsh/alias.zsh"
+alias fetch="fastfetch -l ~/.config/fastfetch/ascii.txt"
 
 
 # shorten commands
