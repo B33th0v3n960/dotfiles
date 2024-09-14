@@ -1,8 +1,8 @@
-/**/.config/zsh/history
-/**/**.log
-./.config/mpd/log
-./.config/mpd/pid
-./.config/mpd/state
-./.config/mpd/socket
-./.config/mpd/database
-./.config/mpd/sticker.sql
+**/.config/zsh/history
+**/**.log
+**/.config/mpd/log
+**/.config/mpd/pid
+**/.config/mpd/state
+**/.config/mpd/socket
+**/.config/mpd/database
+**/.config/mpd/sticker.sql
