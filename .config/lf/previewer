@@ -29,10 +29,10 @@ case "$(basename "$file" | tr '[A-Z]' '[a-z]')" in
 		;;
 	*.pdf)
 		thumbnail="$TEMPDIR/thumbnail"
-		pdftocairo -png -singlefile -rx 200 -ry 200 "$file" "$thumbnail"
+		pdftocairo -png -singlefile -rx 120 -ry 120  "$file" "$thumbnail"
 		preview "$thumbnail.png"
 		;;
-	*.jpg|*.jpeg|*.png|*.webp)
+	*.jpg|*.jpeg|*.png|*.webp|*.gif)
 		preview "$file"
 		;;
 	*.ttf|*.otf|*.woff)
