@@ -20,3 +20,12 @@ fastfetch -l ~/.config/fastfetch/ascii.txt
 precmd() {
   source "$HOME/.config/zsh/alias.zsh"
 }
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

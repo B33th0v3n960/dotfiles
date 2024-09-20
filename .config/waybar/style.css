@@ -117,6 +117,10 @@ window#waybar.chromium {
   margin: 0 4px;
 }
 
+#language {
+  color: #eed49f;
+}
+
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
   margin-left: 0;
@@ -137,6 +141,10 @@ label:focus {
 }
 
 #cpu {
+  color: #eed49f;
+}
+
+#keyboard-state {
   color: #eed49f;
 }
 
