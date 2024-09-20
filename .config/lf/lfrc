@@ -7,6 +7,7 @@ cmd open ${{
     test -L $f && f=$(readlink -f $f)    
     case "$(file --mime-type "$f" -b)" in    
         image/*) imv $fx ;;
+        *.gif) mpv $fx ;;
         text/*) $EDITOR $fx;;    
         audio/*) mpv --audio-display=no $f ;;    
         video/*) mpv $f ;;    
